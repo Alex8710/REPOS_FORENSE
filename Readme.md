@@ -298,3 +298,10 @@ Tagged PDF                      : Yes
 XMP Toolkit                     : Image::ExifTool 12.93
 Copyright                       : Pato Donald
 ```
+
+**Descripción:**
+
+Estos comandos permitiran observar el estado previo del archivo del archivo para luego insertar la metadata de copyright.
+
+## 5. Extraer la miniatura de una imagen (esto debe estar habilitado en la captura de la misma, caso contrario no es posible).
+
