@@ -235,10 +235,9 @@ Estos comandos permitiran observar el estado previo del archivo de imagen, luego
 ExifTool Version Number         : 12.93
 File Name                       : Lboratorio_METADATA_JON.pdf
 Directory                       : C:/Users/CDTi Laboratorios/Downloads
-File Size                       : 305 kB
-Zone Identifier                 : Exists
-File Modification Date/Time     : 2024:08:28 14:13:09-05:00
-File Access Date/Time           : 2024:08:28 14:36:11-05:00
+File Size                       : 306 kB
+File Modification Date/Time     : 2024:08:28 14:36:28-05:00
+File Access Date/Time           : 2024:08:28 14:36:29-05:00
 File Creation Date/Time         : 2024:08:28 14:13:06-05:00
 File Permissions                : -rw-rw-rw-
 File Type                       : PDF
@@ -249,15 +248,6 @@ Linearized                      : No
 Page Count                      : 3
 Language                        : es
 Tagged PDF                      : Yes
-XMP Toolkit                     : 3.1-701
-Producer                        : Microsoft« Word para Microsoft 365
-Creator                         : DHC. JAIDER OSPINA NAVAS
-Creator Tool                    : Microsoft« Word para Microsoft 365
-Create Date                     : 2024:08:27 11:35:21-05:00
-Modify Date                     : 2024:08:27 11:35:21-05:00
-Document ID                     : uuid:214403B8-1F9F-4E5D-AF74-28AE1489D07D
-Instance ID                     : uuid:214403B8-1F9F-4E5D-AF74-28AE1489D07D
-Author                          : DHC. JAIDER OSPINA NAVAS
 ```
 
 ### Paso2: Insertar los metadatos de Copyright
