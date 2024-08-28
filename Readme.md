@@ -293,5 +293,127 @@ Copyright                       : Pato Donald
 
 Estos comandos permitiran observar el estado previo del archivo del archivo para luego insertar la metadata de copyright.
 
+
 ## 5. Extraer la miniatura de una imagen (esto debe estar habilitado en la captura de la misma, caso contrario no es posible).
+
+### Paso 1: Verificar Metadatos Iniciales
+
+**Comando Usado:**
+
+```shell
+.\exiftool.exe "C:\Users\CDTi Laboratorios\Downloads\SampleImage.jpg"
+```
+
+**Resultado:**
+
+```plaintext
+ExifTool Version Number         : 12.93
+File Name                       : SampleImage.jpg
+Directory                       : C:/Users/CDTi Laboratorios/Downloads
+File Size                       : 51 kB
+Zone Identifier                 : Exists
+File Modification Date/Time     : 2024:08:28 17:13:24-05:00
+File Access Date/Time           : 2024:08:28 17:13:46-05:00
+File Creation Date/Time         : 2024:08:28 17:13:23-05:00
+File Permissions                : -rw-rw-rw-
+File Type                       : JPEG
+File Type Extension             : jpg
+MIME Type                       : image/jpeg
+Exif Byte Order                 : Big-endian (Motorola, MM)
+Orientation                     : Horizontal (normal)
+X Resolution                    : 300
+Y Resolution                    : 300
+Resolution Unit                 : inches
+Software                        : Adobe Photoshop CS5 (12.0x20100115 [20100115.m.998 2010/01/15:02:00:00 cutoff; m branch])  Windows
+Modify Date                     : 2017:09:11 22:15:46
+Color Space                     : Uncalibrated
+Exif Image Width                : 300
+Exif Image Height               : 300
+Compression                     : JPEG (old-style)
+Thumbnail Offset                : 386
+Thumbnail Length                : 4083
+Current IPTC Digest             : f39bf9c2ed9ba38e7734dce08cff959a
+Coded Character Set             : UTF8
+Application Record Version      : 57540
+IPTC Digest                     : f39bf9c2ed9ba38e7734dce08cff959a
+Displayed Units X               : inches
+Displayed Units Y               : inches
+Print Style                     : Centered
+Print Position                  : 0 0
+Print Scale                     : 1
+Global Angle                    : 30
+Global Altitude                 : 30
+URL List                        :
+Slices Group Name               : background-2739196 - Copy
+Num Slices                      : 1
+Pixel Aspect Ratio              : 1
+Photoshop Thumbnail             : (Binary data 4083 bytes, use -b option to extract)
+Has Real Merged Data            : Yes
+Writer Name                     : Adobe Photoshop
+Reader Name                     : Adobe Photoshop CS5
+Photoshop Quality               : 11
+Photoshop Format                : Standard
+XMP Toolkit                     : Adobe XMP Core 5.0-c060 61.134342, 2010/01/10-18:06:43
+Creator Tool                    : Adobe Photoshop CS5 (12.0x20100115 [20100115.m.998 2010/01/15:02:00:00 cutoff; m branch])  Windows
+Create Date                     : 2017:09:11 16:40:06+05:30
+Metadata Date                   : 2017:09:11 22:15:46+05:30
+Format                          : image/jpeg
+Color Mode                      : RGB
+Instance ID                     : xmp.iid:2CA293A81097E7118A54A5FD56B2552F
+Document ID                     : xmp.did:2CA293A81097E7118A54A5FD56B2552F
+Original Document ID            : xmp.did:2CA293A81097E7118A54A5FD56B2552F
+History Action                  : saved
+History Instance ID             : xmp.iid:2CA293A81097E7118A54A5FD56B2552F
+History When                    : 2017:09:11 22:15:46+05:30
+History Software Agent          : Adobe Photoshop CS5 (12.0x20100115 [20100115.m.998 2010/01/15:02:00:00 cutoff; m branch])  Windows
+History Changed                 : /
+DCT Encode Version              : 100
+APP14 Flags 0                   : [14]
+APP14 Flags 1                   : (none)
+Color Transform                 : YCbCr
+Image Width                     : 300
+Image Height                    : 300
+Encoding Process                : Baseline DCT, Huffman coding
+Bits Per Sample                 : 8
+Color Components                : 3
+Y Cb Cr Sub Sampling            : YCbCr4:4:4 (1 1)
+Image Size                      : 300x300
+Megapixels                      : 0.090
+Thumbnail Image                 : (Binary data 4083 bytes, use -b option to extract)
+```
+
+### Paso 2: Extraer Imagen
+
+**Comando Usado:**
+
+```shell
+.\exiftool.exe -b -ThumbnailImage "C:\Users\CDTi Laboratorios\Downloads\SampleImage.jpg" > "C:\Users\CDTi Laboratorios\Downloads\ExtractedImage.jpg"
+```
+
+### Paso 3: Verificar Imagen Extraida
+
+**Comando Usado:**
+
+```shell
+.\exiftool.exe "C:\Users\CDTi Laboratorios\Downloads\ExtractedImage.jpg"
+```
+
+**Resultado:**
+
+```plaintext
+ExifTool Version Number         : 12.93
+File Name                       : ExtractedImage.jpg
+Directory                       : C:/Users/CDTi Laboratorios/Downloads
+File Size                       : 8.3 kB
+File Modification Date/Time     : 2024:08:28 17:15:13-05:00
+File Access Date/Time           : 2024:08:28 17:15:19-05:00
+File Creation Date/Time         : 2024:08:28 17:15:13-05:00
+File Permissions                : -rw-rw-rw-
+File Type                       : TXT
+File Type Extension             : txt
+MIME Type                       : text/plain
+MIME Encoding                   : utf-16le
+Byte Order Mark                 : Yes
+Newlines                        : Windows CRLF
+```
 
