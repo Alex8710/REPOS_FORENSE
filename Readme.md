@@ -1,6 +1,8 @@
 # Guía de Gestión de Metadatos con ExifTool
 
-## 1. Verificar Metadatos Iniciales
+## 1. Elimine toda la metadata.
+
+### Paso 1: Verificar Metadatos Iniciales
 
 **Comando Usado:**
 
@@ -43,7 +45,7 @@ Author                          : DHC. JAIDER OSPINA NAVAS
 
 Este comando muestra los metadatos actuales del archivo PDF `Lboratorio_METADATA_JON.pdf`. Incluye detalles como la fecha de creación, el autor, y la versión de PDF.
 
-## 2. Eliminar Todos los Metadatos
+### Paso2: Eliminar Todos los Metadatos
 
 **Comando Usado:**
 
@@ -62,7 +64,7 @@ Warning: [minor] ExifTool PDF edits are reversible. Deleted tags may be recovere
 
 Este comando elimina todos los metadatos del archivo PDF. La advertencia indica que algunos cambios pueden ser reversibles y los tags eliminados pueden ser recuperados.
 
-## 3. Verificar Metadatos Después de la Eliminación
+### Paso 3: Verificar Metadatos Después de la Eliminación
 
 **Comando Usado:**
 
@@ -95,26 +97,29 @@ Tagged PDF                      : Yes
 
 Después de eliminar los metadatos, el archivo PDF aún conserva información básica como el tipo de archivo, tamaño y número de páginas. Los detalles específicos como el autor y la fecha de creación han sido eliminados.
 
-## 4. Guardar la Metadata en Diferentes Formatos
+## Guarde la metadata en diferentes formatos (HTML, txt y csv ) para su futuro
+análisis.
 
-Para guardar la metadata en diferentes formatos (HTML, TXT, y XML), utiliza los siguientes comandos:
+### Guardar la Metadata en Diferentes Formatos
+
+Para guardar la metadata en diferentes formatos (HTML, TXT, y CSV), utiliza los siguientes comandos:
 
 **TXT:**
 
 ```shell
-.\exiftool.exe "C:\Users\CDTi Laboratorios\Downloads\Lboratorio_METADATA_JON.pdf" > metadata.txt
+.\exiftool.exe "C:\Users\CDTi Laboratorios\Downloads\Lboratorio_METADATA_JON.pdf" > "C:\Users\CDTi Laboratorios\Downloads\metadata.txt"
 ```
 
 **HTML:**
 
 ```shell
-.\exiftool.exe -htmldump "C:\Users\CDTi Laboratorios\Downloads\Lboratorio_METADATA_JON.pdf" > metadata.html
+.\exiftool.exe -htmldump "C:\Users\CDTi Laboratorios\Downloads\Lboratorio_METADATA_JON.pdf" > "C:\Users\CDTi Laboratorios\Downloads\metadata.html"
 ```
 
-**XML:**
+**CSV:**
 
 ```shell
-.\exiftool.exe -xml "C:\Users\CDTi Laboratorios\Downloads\Lboratorio_METADATA_JON.pdf" > metadata.xml
+.\exiftool.exe -csv "C:\Users\CDTi Laboratorios\Downloads\Lboratorio_METADATA_JON.pdf" > "C:\Users\CDTi Laboratorios\Downloads\metadata.csv"
 ```
 
 Estos comandos guardarán la metadata en archivos con las extensiones correspondientes para su análisis futuro.
